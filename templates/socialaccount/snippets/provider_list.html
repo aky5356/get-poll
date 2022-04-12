@@ -8,10 +8,7 @@
 
   
     <hr>
-    <div class="login-wrapper"
-    style="display: flex; border: 1px solid #ddd; align-items: center;
-      justify-content: space-between; text-decoration: none; width: 200px;
-      height: 40px; color: black; padding: 0 10px; border-radius: 3px;margin: 0;">
+    <div class="login-wrapper">
       <i class="fab fa-google" style="color: #E34133;"></i>
       <a title="{{provider.name}}" class="socialaccount_provider {{provider.id}} btnn btn-google" 
       href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}"
@@ -19,6 +16,5 @@
       </a>
       
     </div>
-    <p style="text-align: center; margin-top: 10px;">OR</p>
 
 {% endfor %}
