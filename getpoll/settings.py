@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'poll',
     'result',
     'mathfilters',
-
+    'fontawesomefree',
     'django.contrib.sites',
     'allauth',
     'allauth.account',
