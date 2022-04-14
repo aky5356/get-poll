@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}GetPoll{% endblock %}</title>
+    <link rel="stylesheet" href="{% static '/poll/base.css' %}">
+    <link rel="stylesheet" href="{% static '/poll/create_poll.css' %}">
+    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    {% block css %}
+    {% endblock %}
+    {% block scripts %}
+    {% endblock scripts %}
+</head>
+<body>
+
+
+  
+
+      {% include 'poll/navbar.html' %}
+
+
+      <div class="ui segment">
+        {% if messages %}
+        <div class="ui message">
+          <ul>
+            {% for message in messages %}
+            <li>{{message}}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+
+          
+      </div>
+    
+      {% block content %}
+      {% endblock %}
+    {% block footer %}
+    <footer>   
+        
+        <div class="social-links-wrapper">
+            <i class="socio fab fa-github"></i>
+            <i class="socio fab fa-facebook-f"></i>
+            <i class="socio fab fa-instagram"></i>
+            <i class="socio fab fa-twitter"></i>
+      </div>
+      <div>
+        &copy; copyright | 2022
+      </div>
+      <div lass="creators">Made with <i class="fas fa-heart"></i> by Vishal | Yogesh | Ajit</div>
+    </footer>
+    {% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+{% extends "poll/base.html" %}
+{% load static %}
+
+{% block scripts %}
+    <script src="{% static '/poll/js/main.js' %}" defer></script> 
+
+{% endblock scripts %}
+
+{% block title %}
+home
+{% endblock title %}
+
+
+
+{% block content %}
+
+
+
+    
+<section class="upper-content">
+    <p class="tagline"><a href="{% url 'create' %}">Create</a> Instant Polls <br> At Your Finger Clicks!</p>
+</section>
+ 
+
+<h1>LIVE POLLS</h1>
+{% for obj in object_list %}
+
+
+    <div class="card" style="z-index: 0;">
+      <div class="card-body">
+        <a class="question" href="{% url 'poll-detail' obj.id %}">{{obj.question}}</a>
+
+        
+        <div class="result-vote">
+          <a class="result" href="{% url 'result' obj.id%}">result</a>
+          <a class="vote" href="{% url 'result' obj.id%}">vote</a>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    <br>
+{% endfor %}
+
+<section class="middle-content">
+  <p class="p1">Know you audience opinions,<br>in the <span>real time.</span><br>
+  <span class="p2">Designed to be pixel perfect and maximise interactions and results</span>
+  </p>
+  
+  <i class="fas fa-poll"></i>
+</section>
+
+
+
+{% endblock content %}
+
