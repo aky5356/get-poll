@@ -7,35 +7,36 @@ h2{
     font-size: 40px;
     color: #1A132F;
 }
-.title-of-poll-div label, .poll-options{
+.title-of-poll-div label, .cp-text{
     font-size: 30px;
-    color: #999;
+    color: #357dd0;
     font-weight: bold;
 }
-.poll-options{
-    font-size: 20px;
+.cp-text{
+    font-size: 22px;
     margin: 10px 0;
+    color: #3cbe6d;
 }
 .title-of-poll{
     width: 700px;
     height: 70px;
     margin: 10px 0px;
     outline: none;
-    font-size: 20px;
+    font-size: 19px;
     font-family: 'Varela Round';
     padding: 0px 20px;
     border: 3px solid #357dd0;
-    transition: 0.1s ease-in-out;
+    transition: 0.1s all ease-in-out;
     
 }
 
-.title-of-poll:focus{
+.title-of-poll:hover{
     box-shadow: 0 0 10px #357dd0;
     border-radius: 10px;
 }
 
 
-.add-option-btn{
+.btn{
     width: 200px;
     height: 50px;
     background-color: #357dd0;
@@ -43,10 +44,12 @@ h2{
     border: 3px solid #357dd0;
     color: white;
     border-radius: 5px;
-    margin: 10px 0px;
     font-size: 17px;
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: 0.1s all ease-in-out;
 }
-.add-option-btn:hover{
+.btn:hover{
     box-shadow: 0 0 10px #357dd0;
     cursor: pointer;
 }
@@ -55,14 +58,10 @@ h2{
 }
 
 .cp-options-list{
-    /* border: 1px solid black; */
     width: 500px;
-    padding: 10px 0px;
-    border: 1px solid black;
 }
 .cp-options{
-    margin: 20px 0px;
-    border: 1px solid black;
+    margin-bottom: 20px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -71,16 +70,17 @@ h2{
     align-items: stretch;
     justify-content: flex-end;
     position: relative;
+    transition: 0.1s all ease-in-out;
 }
 .cp-options-input-icons-wrapper{
-    /* border: 1px solid black; */
     border: 3px solid #3cbe6d;
     justify-self: flex-end;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 50px;
-    padding: 0px 20px; 
+    padding: 0px 20px 0px 0px; 
+    transition: 0.1s all ease-in-out;
     
 }
 .cp-options-input-icons-wrapper:hover{
@@ -95,8 +95,10 @@ h2{
     border: none;
     outline: none;
     background: none;
+    padding: 0px 20px;
+
 }
-.fa-images{
+.fa-images, .remove-option{
     /* border: 1px solid black; */
     height: 30px;
     width: 30px;
@@ -109,7 +111,71 @@ h2{
     font-size: 15px;
     /* transition: 0.1s all ease-in-out; */
 }
-.fa-images:hover{
-    transform: scale(1.1);
+
+.fa-images:hover, .remove-option:hover{
+    transform: scale(1.05);
+}
+.remove-option{
+    background-color: #FFD8C6;
+    color: #e34133;
 }
 
+.img-xmark{
+    color: #e34133;
+    position: absolute;
+    font-size: 12px;
+    height: 20px;
+    width: 20px;
+    top: 10px;
+    right: 10px;
+    /* border: 1px solid black; */
+    border-radius: 100%;
+    background-color: #FFD8C6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    cursor: pointer;
+}
+.img-xmark:hover{
+    transform: scale(1.05);
+}
+#blur-input{
+    border: none;
+    box-shadow: none;
+    border-radius: 10px;
+    background-color: rgba(255,255,255, 0.5);
+    color: white;
+    margin: 0 10px 10px;
+}
+
+.cp-option-extra .cp-option-text{
+    width: 70%;
+}
+
+.submit-btn{
+    background-color: #3cbe6d;
+    border: 3px solid #3cbe6d;
+    margin: 20px 0px;
+}
+.submit-btn:hover{
+    box-shadow: 0 0 10px #3cbe6d;
+    cursor: pointer;
+}
+.timer-text{
+    color: #e34133;
+}
+.timer{
+    height: 50px;
+    outline: none;
+    padding: 0px 20px;
+    font-size: 17px;
+    margin-bottom: 10px;
+    border: 3px solid #ffd8c6;
+    color: #e34133;
+    transition: 0.1s all ease-in-out;
+}
+.timer:hover{
+    box-shadow: 0 0 10px #ffd8c6;
+    border-radius: 10px;
+}

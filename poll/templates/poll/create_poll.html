@@ -86,27 +86,37 @@ create
     <br>
     <div class="title-of-poll-div">
         <label for="title-of-poll">Poll Title</label><br>
-        <input type="text" required class="title-of-poll" name="title-of-poll" placeholder="Eg. Which is the most used OS?">
+        <input type="text" class="title-of-poll" name="title-of-poll" placeholder="Eg. Which is the most used OS?">
     </div>
-    <p class="poll-options">Poll Options</p>
+    <p class="cp-text poll-options-text">Poll Options</p>
     <div class="cp-options-list">
-        <div class="cp-options cp-option-1">
+        <div class="cp-options">
+            <i class="fa-solid fa-xmark img-xmark"></i>
             <div class="cp-options-input-icons-wrapper">
                 <input type="text" class="cp-option-text">
                 <i class="fa-solid fa-images"></i>
             </div>
         </div>
-        <div class="cp-options cp-option-2">
+        <div class="cp-options">
+            <i class="fa-solid fa-xmark img-xmark"></i>
             <div class="cp-options-input-icons-wrapper">
                 <input type="text" class="cp-option-text">
                 <i class="fa-solid fa-images"></i>
+            </div>
+        </div>
+        <div class="cp-options cp-option-extra">
+            <i class="fa-solid fa-xmark img-xmark"></i>
+            <div class="cp-options-input-icons-wrapper">
+                <input type="text" class="cp-option-text">
+                <i class="fa-solid fa-images"></i>
+                <i class="fa-solid fa-xmark remove-option"></i> 
             </div>
         </div>
     </div>
-    <button class="add-option-btn">Add Options <i class="fa-solid fa-plus"></i></button>
-    
-    
-
+    <button type="button" class="add-option-btn btn">Add Options <i class="fa-solid fa-plus"></i></button>
+    <p class="cp-text timer-text">How long should the poll remain active?</p>
+    <input type="text" placeholder="Eg. 20 [in minutes]" class="timer"><br>
+    <button type="button" class="submit-btn btn">Create Poll</button>
 </form>
 {% endblock %}
 
