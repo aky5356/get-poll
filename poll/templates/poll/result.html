@@ -1,7 +1,11 @@
 {% extends "poll/base.html" %}
 {% load mathfilters %}
+{% load static %}
 
 {% block title %}Results{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{% static '/poll/result.css' %}">
+{% endblock %}
 
 {% block content %}
 <div class="row">
@@ -10,7 +14,7 @@
             <div class="panel-heading">
                 <h3 class="panel-title">Poll Result</h3>
             </div>
-            <hr>
+            <!-- <hr> -->
             <br>
 
             <div class="panel-body">
@@ -35,18 +39,17 @@
             </ul>
 
             <div class="panel-footer" align=center>
-                Total &mdash; <strong>{{ total }}</strong>
+                Total Votes &mdash; <strong>{{ total }}</strong>
             </div>
 
         </div>
     </div>
 </div>
 
-<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
 <div id="myChart"></div>
 
+<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
 	
 

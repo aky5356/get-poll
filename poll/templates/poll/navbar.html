@@ -17,7 +17,8 @@
   
   <div class="right">
     {% if user.is_authenticated %}
-      <a href="{% url 'account_logout' %}" class="sign in">Logout <i class="fas fa-sign-out-alt"></i></a>
+      <!-- <a href="#"></a> -->
+      <a href="{% url 'account_logout' %}" class="sign in logout">Logout <i class="fas fa-sign-out-alt"></i></a>
     {% else %}
       <a href="{% url 'account_login' %}" class="sign in">Login <i class="fas fa-sign-in-alt"></i></a>
       <a href="{% url 'account_signup' %}" class="sign up">SignUp <i class="fas fa-user"></i></a>
