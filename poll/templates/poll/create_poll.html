@@ -14,12 +14,7 @@ create
     <script src="{% static '/poll/js/create.js' %}" defer></script> 
 {% endblock scripts %}
 
-<body>
-    
-
 {% block content %}
-
-
 <form method="POST" enctype="multipart/form-data" class="cp-form">
     {% csrf_token %}
     
@@ -120,4 +115,3 @@ create
 </form>
 {% endblock %}
 
-</body>

@@ -264,4 +264,73 @@ footer{
 .question{
     font-size: 20px;
 }
+.message{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    /* border: 1px solid black; */
+    animation: disappear 1s 1s 1 linear forwards;
+}
 
+@keyframes disappear {
+    0%{
+        padding-top: 50px;
+    }
+    20%{
+        padding-top: 40px;
+        height: 40px;
+    }
+    40%{
+        padding-top: 30px;
+        height: 30px;
+    }
+    60%{
+        padding-top: 20px;
+        height: 20px;
+    }
+    80%{
+        padding-top: 10px;
+        height: 10px;
+    }
+    100%{
+        padding-top: 0px;
+        height: 0px;
+        display: none;
+    }
+}
+.message ul li{
+    animation: remove 1s 1s 1 linear forwards;
+}
+@keyframes remove {
+    0%{
+        opacity: 1;
+    }
+    20%{
+        opacity: 0.8;
+    }
+    40%{
+        opacity: 0.6;
+    }
+    60%{
+        opacity: 0.4;
+    }
+    80%{
+        opacity: 0.2;
+    }
+    100%{
+        opacity: 0;
+        display: none;
+    }
+}
+.pswd-mail-snt{
+    width: fit-content;
+    list-style: none;
+    border-radius: 3px;
+    border: 2px solid #3BBD6C;
+    background-color: #3BBD6C;
+    padding: 20px;
+    box-shadow: 0 0 10px #3BBD6C;
+    color: whitesmoke;
+}

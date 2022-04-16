@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}GetPoll{% endblock %}</title>
     <link rel="stylesheet" href="{% static '/poll/base.css' %}">
-    <link rel="stylesheet" href="{% static '/poll/login.css' %}">
+    <!-- <link rel="stylesheet" href="{% static '/poll/login.css' %}"> -->
     <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
     {% block css %}
     {% endblock %}
@@ -21,7 +21,7 @@
   
 
       {% include 'poll/navbar.html' %}
-      <div class="ui segment">
+      {% block msgs %}
         {% if messages %}
         <div class="ui message">
           <ul>
@@ -31,7 +31,7 @@
           </ul>
         </div>
         {% endif %}
-      </div>
+      {% endblock %}
       {% block content %}
       {% endblock %}
     {% block footer %}
@@ -50,5 +50,7 @@
     </footer>
     {% endblock %}
 
+
 </body>
+
 </html>

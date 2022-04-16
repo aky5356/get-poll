@@ -125,11 +125,8 @@ label[for='id_remember']{
 }
 .message{
   background-color: #F8F9FA;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 50px;
 }
+
 ul li{
   width: fit-content;
   list-style: none;
@@ -139,28 +136,56 @@ ul li{
   padding: 20px;
   box-shadow: 0 0 10px #e34133;
   color: whitesmoke;
+
 }
-.errorlist li{
+.errorlist{
+  /* border: 1px solid black; */
   width: 350px;
-  padding:10px;
   text-align: center;
   margin: 20px 0;
+  animation: remove_errorlist 1s 1s 1 linear forwards;
 }
+.errorlist li{
+  animation: remove_errorlist 1s 1s 1 linear forwards;
+}
+@keyframes remove_errorlist {
+  0%{
+  }
+  20%{
+      height: 40px;
+      opacity: 0.8;
+  }
+  40%{
+      height: 30px;
+      opacity: 0.6;
+  }
+  60%{
+      height: 20px;
+      opacity: 0.4;
+  }
+  80%{
+      height: 10px;
+      margin: 10px 0px;
+      opacity: 0.2;
+  }
+  100%{
+      margin: 0px;
+      height: 0px;
+      display: none;
+      opacity: 0;
+  }
+}
+
+
 .lgt-btn{
   margin-top: 10px;
 }
 .para{
   /* border: 1px solid black; */
-  padding: 20px 20px;
+  padding: 0 20px 20px;
   width: 330px;
   font-size: 15px;
   text-align: center;
   color: #3BBD6C;
-}
-.pswd-mail-snt{
-  background-color: #3BBD6C;
-  box-shadow: 0 0 10px #3BBD6C;
-  border-radius: 3px;
-  border: 2px solid #3BBD6C;
 }
 
