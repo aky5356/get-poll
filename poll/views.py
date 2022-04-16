@@ -157,7 +157,7 @@ def profile_info(request):
 
 def check_create_poll(request):
     if request.user.is_anonymous:
-        messages.info(request, 'You must log in to create polls.')
+        messages.info(request, 'You must log in to create polls')
     return create_poll(request)
 
 

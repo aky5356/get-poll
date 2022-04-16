@@ -20,7 +20,7 @@ create
 {% block content %}
 
 
-<form method="POST" enctype="multipart/form-data" >
+<form method="POST" enctype="multipart/form-data" class="cp-form">
     {% csrf_token %}
     
     <!-- {<div class="create-poll-container">
@@ -82,7 +82,7 @@ create
         
     
     </div>}-->
-    <h2>Create Your Awesome Poll</h2>
+    <h2 class="cp-h2">Create Your Awesome Poll</h2>
     <br>
     <div class="title-of-poll-div">
         <label for="title-of-poll">Poll Title</label><br>
