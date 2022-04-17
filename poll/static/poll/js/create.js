@@ -26,15 +26,15 @@ function add_image(uploaded_img){
         reader.readAsDataURL(uploaded_img.files[0])
 }
 
-function remove_option(){
-    const remove_option_list = document.querySelectorAll('.remove-option')
-    remove_option_list.forEach((e) => {
-        e.addEventListener("click", (event)=>{
-            event.target.parentNode.parentNode.style.display = 'none'
-        })
-    })
+function remove_option(element){
+    // const remove_option_list = document.querySelectorAll('.remove-option')
+    // remove_option_list.forEach((e) => {
+    //     e.addEventListener("click", (event)=>{
+            element.parentNode.parentNode.style.display = 'none'
+    //     })
+    // })
 }
-remove_option()
+// remove_option()
 
 const add_option_btn = document.querySelector('.add-option-btn')
 add_option_btn.addEventListener('click', () => {
@@ -50,10 +50,10 @@ add_option_btn.addEventListener('click', () => {
                         <i class="fa-solid fa-images"></i>
                     </label>
                     <input type="file" name="file_input-${child_cnt}" id = "file_input-${child_cnt}"class ="file_input" style="display: none;" accept="image/*" onchange="add_image(this)">
-                    <i class="fa-solid fa-xmark remove-option"></i>
+                    <i class="fa-solid fa-xmark remove-option" onclick="remove_option(this)"></i>
                 </div>
               `
     option_list.appendChild(new_option)
-    remove_option()
+    // remove_option()
 })
 

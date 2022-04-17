@@ -81,7 +81,7 @@ create
     <br>
     <div class="title-of-poll-div">
         <label for="title-of-poll">Poll Title</label><br>
-        <input type="text" class="title-of-poll" name="title-of-poll" placeholder="Eg. Which is the most used OS?">
+        <input required type="text" class="title-of-poll" name="title-of-poll" placeholder="Eg. Which is the most used OS?">
     </div>
     <p class="cp-text poll-options-text">Poll Options</p>
     <div class="cp-options-list">
@@ -92,13 +92,13 @@ create
                 <label for="file_input-0">
                     <i class="fa-solid fa-images"></i>
                 </label>
-                <input type="file" name="file_input-0"  id = "file_input-0" accept="image/*" onchange="add_image(this)">
+                <input required type="file" name="file_input-0"  id = "file_input-0" accept="image/*" onchange="add_image(this)">
             </div>
         </div>
         <div class="cp-options">
             <i class="fa-solid fa-xmark img-xmark"></i>
             <div class="cp-options-input-icons-wrapper">
-                <input type="text" class="cp-option-text">
+                <input required type="text" class="cp-option-text">
                 <label for="file_input-1">
                     <i class="fa-solid fa-images"></i>
                 </label>
@@ -113,13 +113,13 @@ create
                     <i class="fa-solid fa-images"></i>
                 </label>
                 <input type="file" name="file_input-2" id = "file_input-2" accept="image/*" onchange="add_image(this)">
-                <i class="fa-solid fa-xmark remove-option"></i> 
+                <i class="fa-solid fa-xmark remove-option" onclick="remove_option(this)"></i> 
             </div>
         </div>
     </div>
     <button type="button" class="add-option-btn btn">Add Options <i class="fa-solid fa-plus"></i></button>
-    <p class="cp-text timer-text">How long should the poll remain active?</p>
-    <input type="text" placeholder="Eg. 20 [in minutes]" class="timer"><br>
+    <label for="timer" class="cp-text">How long should the poll remain active?</label>
+    <input reuired type="text" placeholder="Eg. 20 [in minutes]" name="timer" id="timer"><br>
     <button type="submit" class="submit-btn btn">Create Poll</button>
 </form>
 {% endblock %}
