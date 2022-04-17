@@ -54,4 +54,14 @@
 
 </body>
 
+<script>
+  const nav_menu = document.querySelector('.nav-menu')
+  const profile_menu = document.querySelector('.profile-dashboard-menu')
+  nav_menu.addEventListener('mouseenter', ()=>{
+    profile_menu.style.display = 'block';
+  })
+  nav_menu.addEventListener('mouseleave', ()=>{
+    profile_menu.style.display = 'none';
+  })
+</script>
 </html>

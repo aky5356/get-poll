@@ -7,8 +7,8 @@
 <link rel="stylesheet" href="{% static '/poll/login.css' %}">
 {% endblock %}
 
+
 {% block content %}
-{% include 'poll/profile_dashboard.html' %}
 <div class="lgn-container">
   <div class="lgn-wrapper">
       <h2 class="sign-in-h2">{% trans "E-mail Addresses" %}</h2>
@@ -30,12 +30,12 @@
               {{ emailaddress.email }}
             </span>
             {% if emailaddress.verified %}
-            <span class="verified">{% trans "Verified" %}</span>
+            <span class="verified status" >{% trans "Verified" %}</span>
             {% else %}
-            <span class="unverified">{% trans "Unverified" %}</span>
+            <span class="unverified status">{% trans "Unverified" %}</span>
             {% endif %}
             {% if emailaddress.primary %}
-            <span class="primary">{% trans "Primary" %}</span> 
+            <span class="primary status">{% trans "Primary" %}</span> 
             {% endif %}
       </label>
       
@@ -43,9 +43,9 @@
       {% endfor %}
 
     <div class="buttonHolder">
-          <button class="secondaryAction ui button lgn-btn" type="button" name="action_primary" >{% trans 'Make Primary' %}</button>
-          <button class="secondaryAction ui button lgn-btn" type="button" name="action_send" >{% trans 'Re-send Verification' %}</button>
-          <button class="primaryAction ui button secondary lgn-btn" type="button" name="action_remove">{% trans 'Remove' %}</button>
+          <button class="secondaryAction ui button lgn-btn" type="submit" name="action_primary" >{% trans 'Make Primary' %}</button>
+          <button class="secondaryAction ui button lgn-btn" type="submit" name="action_send" >{% trans 'Re-send Link' %}</button>
+          <button class="primaryAction ui button secondary lgn-btn" type="submit" name="action_remove">{% trans 'Remove' %}</button>
     </div>
 
     </fieldset>
@@ -66,7 +66,7 @@
         <form method="post" action="{% url 'account_email' %}" class="add_email ui form">
           {% csrf_token %}
           {{ form.as_p }}
-          <button name="action_add" type="button" class="lgn-btn">{% trans "Add E-mail" %}
+          <button name="action_add" type="submit" class="lgn-btn">{% trans "Add E-mail" %}
             <i class="fa-solid fa-at"></i>
           </button>
         </form>
