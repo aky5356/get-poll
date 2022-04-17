@@ -89,21 +89,30 @@ create
             <i class="fa-solid fa-xmark img-xmark"></i>
             <div class="cp-options-input-icons-wrapper">
                 <input type="text" class="cp-option-text">
-                <i class="fa-solid fa-images"></i>
+                <label for="file_input-0">
+                    <i class="fa-solid fa-images"></i>
+                </label>
+                <input type="file" name="file_input-0"  id = "file_input-0" accept="image/*" onchange="add_image(this)">
             </div>
         </div>
         <div class="cp-options">
             <i class="fa-solid fa-xmark img-xmark"></i>
             <div class="cp-options-input-icons-wrapper">
                 <input type="text" class="cp-option-text">
-                <i class="fa-solid fa-images"></i>
+                <label for="file_input-1">
+                    <i class="fa-solid fa-images"></i>
+                </label>
+                <input type="file" name="file_input-1" id = "file_input-1" accept="image/*" onchange="add_image(this)">
             </div>
         </div>
         <div class="cp-options cp-option-extra">
             <i class="fa-solid fa-xmark img-xmark"></i>
             <div class="cp-options-input-icons-wrapper">
                 <input type="text" class="cp-option-text">
-                <i class="fa-solid fa-images"></i>
+                <label for="file_input-2">
+                    <i class="fa-solid fa-images"></i>
+                </label>
+                <input type="file" name="file_input-2" id = "file_input-2" accept="image/*" onchange="add_image(this)">
                 <i class="fa-solid fa-xmark remove-option"></i> 
             </div>
         </div>
@@ -111,7 +120,7 @@ create
     <button type="button" class="add-option-btn btn">Add Options <i class="fa-solid fa-plus"></i></button>
     <p class="cp-text timer-text">How long should the poll remain active?</p>
     <input type="text" placeholder="Eg. 20 [in minutes]" class="timer"><br>
-    <button type="button" class="submit-btn btn">Create Poll</button>
+    <button type="submit" class="submit-btn btn">Create Poll</button>
 </form>
 {% endblock %}
 
