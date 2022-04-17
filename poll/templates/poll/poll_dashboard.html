@@ -1,5 +1,4 @@
 {% extends 'poll/base.html' %}
-
 {% load static %}
 
 {% block scripts %}
@@ -10,21 +9,24 @@
 {{user.username}} poll list
 {% endblock title %}
 
+
 {% block content %}
 
 <!-- show all the polls here , implement update and delete feature then will see how it goes -->
+<div class="poll-dashboard-wrapper">
 
-<div class="ui yellow message">
+
+<div class="ui yellow">
     <i class="star icon"></i>
     All the polls you created are listed here
   </div>
 {% for poll in polls %}
 
-    <div class="ui visible message">
+    <div class="ui visible">
         <h4 class="ui header"><a href="{% url 'poll-detail' poll.id%}">{{poll.question}}</a>&nbsp; <a style="color: blue" href="{% url 'userPollDetail' poll.id%}">(edit)</a></a></h4>
     </div>
 
 {% endfor %}
 
-
+</div>
 {% endblock %}

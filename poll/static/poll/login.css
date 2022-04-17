@@ -188,4 +188,52 @@ ul li{
   text-align: center;
   color: #3BBD6C;
 }
+.buttonHolder{
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.buttonHolder button{
+  width: 150px;
+  height: 50px;
+  font-size: 14px;
+  margin: 0;
+}
 
+.ctrlHolder{
+  border: 2px solid #DEE2E6;
+  margin: 0 auto;
+  margin: 20px 0px;
+  padding: 10px 0px;
+  border-radius: 3px;
+}
+.ctrlHolder input{
+  margin: 0;
+  width: 14px;
+  height: 14px;
+}
+.ctrlHolder label{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* border: 1px solid black; */
+  font-size: 14px;
+}
+fieldset{
+  border: none;
+  outline: none;
+  margin-bottom: 50px;
+}
+.ctrlHolder span{
+  margin: 0px 20px;
+}
+
+.add_email input{
+  width: calc(100% - 41px);
+}
+.add_email button{
+  width: 100%;
+  margin: 10px 0px 0px;
+}

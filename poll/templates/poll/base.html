@@ -19,8 +19,9 @@
 
 
   
-
-      {% include 'poll/navbar.html' %}
+      {% block header %}
+        {% include 'poll/navbar.html' %}
+      {% endblock %}
       {% block msgs %}
         {% if messages %}
         <div class="ui message">
