@@ -18,3 +18,5 @@ urlpatterns = [
     path('delelePoll/<int:pk>', views.deletePoll, name='deletePoll'),
 
 ]
+
+handler404 = 'poll.views.page_not_found'

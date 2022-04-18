@@ -23,7 +23,7 @@
 {% for poll in polls %}
 
     <div class="ui visible">
-        <h4 class="ui header"><a href="{% url 'poll-detail' poll.id%}">{{poll.question}}</a>&nbsp; <a style="color: blue" href="{% url 'userPollDetail' poll.id%}">(edit)</a></a></h4>
+        <h4 class="ui header"><a href="{% url 'poll-detail' poll.id%}">{{poll.question}} <a style="color: blue" href="{% url 'userPollDetail' poll.id%}">(edit)</a></h4>
     </div>
 
 {% endfor %}

@@ -193,6 +193,7 @@ ul li{
 }
 .para{
   /* border: 1px solid black; */
+  margin: 0 auto;
   padding: 0 20px 20px;
   width: 330px;
   font-size: 15px;

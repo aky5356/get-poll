@@ -30,7 +30,7 @@
     
 }
 
-.title-of-poll:hover{
+.title-of-poll:focus-within{
     box-shadow: 0 0 10px #357dd0;
     border-radius: 10px;
 }
@@ -87,7 +87,7 @@
     transition: 0.1s all ease-in-out;
     
 }
-.cp-options-input-icons-wrapper:hover{
+.cp-options-input-icons-wrapper:focus-within{
     box-shadow: 0 0 10px #3cbe6d;
     border-radius: 10px;
     cursor: pointer;
@@ -181,7 +181,7 @@ label[for="timer"]{
     color: #e34133;
     transition: 0.1s all ease-in-out;
 }
-#timer:hover{
+#timer:focus-within{
     box-shadow: 0 0 5px #e34133;
     border-radius: 10px;
 }

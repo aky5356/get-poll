@@ -15,7 +15,8 @@ from django.contrib import messages #import messages
 import itertools 
 import datetime
 
-
+def page_not_found(request, exception):
+    return render(request, 'poll/page_not_found.html')
 
 # it will pass all the poll object in the model , cause its a listView
 class PollListView(ListView):
